@@ -17,3 +17,13 @@ export interface Cards {
   birthday?: string;
   password?: string;
 }
+
+export interface UserInfo {
+  gender: string;
+  name: { first: string; last: string };
+  email: string;
+  picture: { large: string };
+  location: { city: string };
+  phone: string;
+  dob: { date: string };
+}

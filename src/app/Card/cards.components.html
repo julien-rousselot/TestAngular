@@ -1,1 +1,9 @@
-<h1>Test angular</h1>
+<h1>Random Cards</h1>
+<section *ngFor="let userInfo of data.results">
+  <img [src]="userInfo.picture.large" alt="Photo de {{ userInfo.name.first }}">
+  <h2>{{ userInfo.name.first }} {{ userInfo.name.last }}</h2>
+  <h3>{{ userInfo.email }}</h3>
+  <h3>{{ userInfo.phone }}</h3>
+  <h3>{{ userInfo.location.city }}</h3>
+</section>
+<button (click)="getData()">Fetch</button>

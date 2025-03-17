@@ -1,15 +1,15 @@
-import { Component, input } from '@angular/core';
+import { Component } from '@angular/core';
 // import { RouterOutlet } from '@angular/router';
 import { Cards } from './Card/cards.components';
 
-//Soit templateUrl avec url de la route ex: './Card/cards.components.html'
-//Soit template avec le code html ou export
+//Or templateUrl with url of the route ex: './Card/cards.components.html'
+//Or template with the html code or export
+
 @Component({
   selector: 'app-root',
-  imports: [Cards],
-  template: '<cards/>',
+  imports: [Cards,],
+  template: '<section><cards/><section>',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'TestAngulars';
 }
