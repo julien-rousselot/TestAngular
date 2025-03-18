@@ -2,6 +2,13 @@ main{
   text-align: center;
   font-family: 'Merriweather', serif;
 }
+h1{
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding: 1rem 0;
+  color: rgb(7, 7, 60);
+  font-family: 'Merriweather', serif;
+}
 p{
   font-size: 0.8rem;
   font-family: 'Roboto', sans-serif;
@@ -21,15 +28,16 @@ h3{
 }
 .passportCover {
   position: absolute;
-  bottom: 27%;
+  bottom: 0;
   left: 0;
   transition: transform 1s ease-in-out;
   z-index: 2;
   width: calc(100% - 1rem);
   padding: 0 0.5rem;
+  max-height: 50%;
 }
 .passportCover.rotate {
-  transform: translateY(-140px) rotateX(90deg);
+  transform: translateY(-130px) rotateX(90deg);
 }
 .container-passport{
   position: relative;
@@ -37,6 +45,7 @@ h3{
 }
 .profilPassport {
   opacity: 0;
+  transition-delay: 5s;
   transition: opacity 1s ease-in-out;
   width: 100%;
 }
@@ -45,7 +54,6 @@ h3{
   filter: sepia(0.6) contrast(1.2) saturate(1.5);
   transition: all 2s ease;
   border-radius: 3%;
-  transition-delay: 1s;
 }
 .info{
   display: flex;
@@ -64,6 +72,7 @@ h3{
   overflow: hidden;
   width: 100%;
   padding: 0.2rem 0rem;
+  height: 100%;
 }
 .openButton {
   display: block;
@@ -88,6 +97,10 @@ h3{
 }
 .infoUser{
   padding: 1rem 0;
+  height: 50%;
+}
+.infoFriends{
+  height: 50%;
 }
 .buttonChangePassport{
   background-color: #545454;
@@ -95,8 +108,36 @@ h3{
   padding: 1rem 2rem;
   border-radius: 10px;
   font-weight: bold;
+  font-size: medium;
+  font-family: 'Roboto', sans-serif;
+  transition: width 0.3s ease, transform 0.3s ease;
+
 }
-.bottomPassport{
-  background: #e90101;
-  width: 50%;
+.buttonChangePassport:hover{
+  transform: scale(1.1);
+  background-color: #676666;
+}
+.map {
+  padding: 1.5rem 1rem;
+}
+@media (min-width: 768px) {
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-cards{
+    width: 25%;
+  }
+  .nav{
+    display: flex;
+    align-items: center;
+  }
+  .buttonChangePassport{
+    padding: 1rem 2rem;
+    margin: 1rem;
+  }
+  .map {
+    padding: 3rem 1rem;
+  }
 }
