@@ -1,3 +1,102 @@
-h1 {
-  color: red;
+main{
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+p{
+  font-size: 0.8rem;
+  font-family: 'Roboto', sans-serif;
+}
+h2{
+  font-size: 1.4rem;
+  font-weight:700;
+}
+h3{
+  font-size: 1.2rem;
+  font-weight:500;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+.container-card{
+  position: relative;
+}
+.passportCover {
+  position: absolute;
+  bottom: 27%;
+  left: 0;
+  transition: transform 1s ease-in-out;
+  z-index: 2;
+  width: calc(100% - 1rem);
+  padding: 0 0.5rem;
+}
+.passportCover.rotate {
+  transform: translateY(-140px) rotateX(90deg);
+}
+.container-passport{
+  position: relative;
+  max-height: 50%;
+}
+.profilPassport {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+}
+.profilPassport img{
+  margin: 0 1rem;
+  filter: sepia(0.6) contrast(1.2) saturate(1.5);
+  transition: all 2s ease;
+  border-radius: 3%;
+  transition-delay: 1s;
+}
+.info{
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  align-items: center;
+  margin-top: 1rem ;
+}
+.open {
+  opacity: 1;
+}
+.backgroundPassport{
+  position: absolute;
+  top: 0;
+  height: 50%;
+  overflow: hidden;
+  width: 100%;
+  padding: 0.2rem 0rem;
+}
+.openButton {
+  display: block;
+  margin: auto;
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+.openButton:hover {
+  transform: scale(1.1);
+}
+.country{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 10%;
+}
+.logoPassport{
+  width: 10%;
+}
+.pictureProfil{
+  width: 40%;
+}
+.infoUser{
+  padding: 1rem 0;
+}
+.buttonChangePassport{
+  background-color: #545454;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.bottomPassport{
+  background: #e90101;
+  width: 50%;
 }

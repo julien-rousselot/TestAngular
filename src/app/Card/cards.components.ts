@@ -1,14 +1,19 @@
 import { Component } from "@angular/core";
 import { UserInfo } from "./cards";
+// import { NgClass } from '@angular/common';
+import { CommonModule } from '@angular/common'; // ✅ Import de CommonModule
 
 @Component({
+  standalone: true,
+  imports: [CommonModule],
   selector: 'cards',
   styleUrl: './cards.components.scss',
   templateUrl: './cards.components.html',
 })
 export class Cards {
-  title = 'Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
   data: UserInfo[] = [];
+  isRotated = false;
+  isOpen = false;
 
   // Api call
   async getData() {
@@ -31,5 +36,10 @@ export class Cards {
         console.log("hey");
       }
     }
+  }
+
+  activePage() {
+    this.isRotated = !this.isRotated;
+    this.isOpen = !this.isOpen;
   }
 }
