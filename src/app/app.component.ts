@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { RouterOutlet } from '@angular/router';
 import { Cards } from './Card/cards.components';
 
 //Or templateUrl with url of the route ex: './Card/cards.components.html'

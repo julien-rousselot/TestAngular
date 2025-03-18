@@ -23,7 +23,7 @@ export interface UserInfo {
   name: { first: string; last: string };
   email: string;
   picture: { large: string };
-  location: { city: string };
+  location: { country: string };
   phone: string;
-  dob: { date: string };
+  dob: { age: number };
 }
