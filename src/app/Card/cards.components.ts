@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 import { UserInfo } from "./cards";
-// import { NgClass } from '@angular/common';
-import { CommonModule } from '@angular/common'; // ✅ Import de CommonModule
+import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
