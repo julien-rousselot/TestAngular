@@ -1,10 +1,11 @@
 import { Component } from "@angular/core";
 import { UserInfo } from "./cards";
 import { CommonModule } from '@angular/common';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @Component({
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, GoogleMapsModule],
   selector: 'cards',
   styleUrl: './cards.components.scss',
   templateUrl: './cards.components.html',
