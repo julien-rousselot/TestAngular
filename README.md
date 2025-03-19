@@ -18,5 +18,6 @@ Form with Validation: Implements form validation to assure proper user input bef
 
 Google Maps Integration: An embedded Google Map is included in the project.
 
-Demo (Cliquer sur l'image): [![Watch the demo](https://img.youtube.com/vi/NoeQ6WbLRpo/maxresdefault.jpg)](https://youtu.be/NoeQ6WbLRpo)
+Demo (Click on the picture):
 
+[![Watch the demo](https://img.youtube.com/vi/NoeQ6WbLRpo/maxresdefault.jpg)](https://youtu.be/NoeQ6WbLRpo)
