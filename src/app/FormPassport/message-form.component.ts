@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @Component({
   selector: 'app-message-form',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, GoogleMapsModule],
   template: `
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <label>
@@ -26,6 +27,9 @@ import { CommonModule } from '@angular/common';
       </span>
       <button type="submit">Envoyer</button>
     </form>
+      <div class="map">
+        <google-map [height]="'30vh'" [width]="'100%'"></google-map>
+      </div>
   `,
   styleUrls: ['./message-form.component.scss']
 })
