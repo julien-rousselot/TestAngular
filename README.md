@@ -2,7 +2,6 @@
 
 This project is an interactive Passport Card that dynamically retrieves and displays user data using a free API. The card includes an animation effect, where the passport appears to open, revealing changing user details. The project also features reusable and scalable components, such as a dynamic footer, a form with validation, and an embedded Google Map.
 
-
 ## Interactive Passport Card
 
 Fetch user information from a free API.
@@ -19,5 +18,5 @@ Form with Validation: Implements form validation to assure proper user input bef
 
 Google Maps Integration: An embedded Google Map is included in the project.
 
-Demo: [![Watch the demo](https://img.youtube.com/vi/NoeQ6WbLRpo/maxresdefault.jpg)](https://youtu.be/NoeQ6WbLRpo)
+Demo (Cliquer sur l'image): [![Watch the demo](https://img.youtube.com/vi/NoeQ6WbLRpo/maxresdefault.jpg)](https://youtu.be/NoeQ6WbLRpo)
 
