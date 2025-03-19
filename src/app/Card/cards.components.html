@@ -1,7 +1,7 @@
 <main>
 <h1>Random Cards</h1>
 <div class="nav">
-  <button class="buttonChangePassport" (click)="getData()">Change de Passeport</button>
+  <button class="buttonChangePassport" (click)="getData()">Autre Passeport</button>
   <img
   class="openButton" [src]="isOpen ? '/tamponClose.svg' : '/tamponOpen.svg'"
   alt="button to open the passport"
@@ -45,10 +45,7 @@
               </span>
           </div>
         </div>
-
-        <div class="map">
-          <google-map [height]="'15vh'" [width]="'100%'"></google-map>
-        </div>
+        <img class="plane" src="/plane.svg" alt="plane">
       </div>
     </section>
   </div>
