@@ -2,53 +2,52 @@
 <h1>Random Cards</h1>
 <div class="nav">
   <button class="buttonChangePassport" (click)="getData()">Change de Passeport</button>
-  <img class="openButton" src="/tamponOpen.svg" alt="button to open the passport" (click)="activePage()" (click)="getData()">
+  <img
+  class="openButton" [src]="isOpen ? '/tamponClose.svg' : '/tamponOpen.svg'"
+  alt="button to open the passport"
+  (click)="togglePassport()">
 </div>
 
 <div class="container-cards">
   <div class="container-passport">
-    <img class="passportCover" (click)="activePage()" (click)="getData()" [ngClass]="{'rotate': isRotated}" src="/passport.svg" alt="passeport cover">
+    <img class="passportCover" (click)="togglePassport()" (click)="getData()" [ngClass]="{'rotate': isRotated}" src="/passport.svg" alt="passeport cover">
     <img class="profilPassport" [ngClass]="{'open': isOpen}" src="/profilPassport.svg" alt="passport profil page">
     <section class="backgroundPassport">
-      <div class="infoUser profilPassport" *ngFor="let userInfo of data" [ngClass]="{'open': isOpen}">
+      <div class="infoUser profilPassport" *ngIf="data[0]" [ngClass]="{'open': isOpen}">
         <div class="country">
-          <h2>{{ userInfo.location.country }}</h2>
+          <h2>{{ data[0].location.country }}</h2>
           <img class="logoPassport" src="/logoPassport.svg" alt="logo passeport">
           <h2>Passport</h2>
         </div>
         <div class="info">
           <div class="pictureProfil">
-            <img [src]="userInfo.picture.large" alt="picture of the random person">
+            <img class="profilPicture" [src]="data[0].picture.large" alt="picture of the random person">
           </div>
           <div class="infoProfil">
             <p>First Name</p>
-            <h3>{{ userInfo.name.first }}</h3>
+            <h3>{{ data[0].name.first }}</h3>
             <p>Last Name</p>
-            <h3>{{ userInfo.name.last }}</h3>
+            <h3>{{ data[0].name.last }}</h3>
             <p>Age</p>
-            <h3>{{ userInfo.dob.age }}</h3>
+            <h3>{{ data[0].dob.age }}</h3>
             <p>Number</p>
-            <h3>{{ userInfo.phone }}</h3>
+            <h3>{{ data[0].phone }}</h3>
           </div>
         </div>
       </div>
-      <div class="infoFriends">
-        <p>Friends locations</p>
-        <div>
-          <span>
-            <h2></h2>
-            <img src="" alt=""></span>
-          <span>
-            <h2></h2>
-            <img src="" alt="">
-          </span>
-          <span>
-            <h2></h2>
-            <img src="" alt="">
-          </span>
-          <div class="map">
-            <google-map [height]="'15vh'" [width]="'100%'"></google-map>
+      <div class="infoFriends profilPassport" [ngClass]="{'open': isOpen}">
+        <p>Friends</p>
+        <div class="friendsContainer">
+          <div *ngFor="let userInfo of data.slice(1)" class="friends">
+              <span class="friendsInfo">
+                <h4>{{ userInfo.name.first }}</h4>
+                <img class="friendsPicture" [src]="userInfo.picture.medium" alt="picture of the random person">
+              </span>
           </div>
+        </div>
+
+        <div class="map">
+          <google-map [height]="'15vh'" [width]="'100%'"></google-map>
         </div>
       </div>
     </section>

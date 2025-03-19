@@ -2,22 +2,23 @@ import { Component } from "@angular/core";
 import { UserInfo } from "./cards";
 import { CommonModule } from '@angular/common';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { MessageFormComponent } from "../FormPassport/message-form.component";
 
 @Component({
   standalone: true,
-  imports: [CommonModule, GoogleMapsModule],
+  imports: [MessageFormComponent, CommonModule, GoogleMapsModule, ],
   selector: 'cards',
   styleUrl: './cards.components.scss',
   templateUrl: './cards.components.html',
 })
 export class Cards {
   data: UserInfo[] = [];
-  isRotated = false;
-  isOpen = false;
+  isRotated: boolean = false;
+  isOpen: boolean = false;
 
   // Api call
   async getData() {
-    const url = "https://randomuser.me/api/";
+    const url = "https://randomuser.me/api/?results=4";
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -38,8 +39,13 @@ export class Cards {
     }
   }
 
-  activePage() {
+  //call the rotation animation for the passport
+  //check if the passport is open or not and toggle it, call to function getData only while opening
+  togglePassport() {
     this.isRotated = !this.isRotated;
+    if (!this.isOpen) {
+      this.getData();
+    }
     this.isOpen = !this.isOpen;
   }
 }
