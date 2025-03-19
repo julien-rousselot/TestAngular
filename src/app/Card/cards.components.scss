@@ -23,12 +23,19 @@ h3{
   padding-bottom: 5px;
   text-transform: uppercase;
 }
+h4{
+  font-size: 0.99rem;
+  font-weight:500;
+  padding: 5px 0;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+}
 .container-card{
   position: relative;
 }
 .passportCover {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   transition: transform 1s ease-in-out;
   z-index: 2;
@@ -37,7 +44,7 @@ h3{
   max-height: 50%;
 }
 .passportCover.rotate {
-  transform: translateY(-130px) rotateX(90deg);
+  transform: translateY(170px) rotateX(-90deg);
 }
 .container-passport{
   position: relative;
@@ -51,9 +58,12 @@ h3{
 }
 .profilPassport img{
   margin: 0 1rem;
-  filter: sepia(0.6) contrast(1.2) saturate(1.5);
+  filter: sepia(0.5) contrast(1.2) saturate(1.2);
   transition: all 2s ease;
+}
+.profilPicture{
   border-radius: 3%;
+  box-shadow: 5px 5px 10px #545454;
 }
 .info{
   display: flex;
@@ -65,14 +75,17 @@ h3{
 .open {
   opacity: 1;
 }
-.backgroundPassport{
+.backgroundPassport {
   position: absolute;
   top: 0;
-  height: 50%;
-  overflow: hidden;
-  width: 100%;
-  padding: 0.2rem 0rem;
+  left: 50%;
+  transform: translateX(-50%);
   height: 100%;
+  width: 90%;
+  overflow: hidden;
+}
+.infoProfil{
+  padding-left: 2rem;
 }
 .openButton {
   display: block;
@@ -85,8 +98,8 @@ h3{
 .country{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 0 2rem;
+  justify-content: space-around;
+  padding: 0.2rem 0 0 0;
   height: 10%;
 }
 .logoPassport{
@@ -97,28 +110,46 @@ h3{
 }
 .infoUser{
   padding: 1rem 0;
-  height: 50%;
-}
-.infoFriends{
-  height: 50%;
 }
 .buttonChangePassport{
-  background-color: #545454;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(71, 66, 66);
   padding: 1rem 2rem;
-  border-radius: 10px;
+  border-radius: 12px;
   font-weight: bold;
-  font-size: medium;
+  font-size: large;
   font-family: 'Roboto', sans-serif;
   transition: width 0.3s ease, transform 0.3s ease;
-
 }
 .buttonChangePassport:hover{
   transform: scale(1.1);
-  background-color: #676666;
+  background-color: #dcd7d7;
+}
+.infoFriends {
+  height: 50%;
+  margin: 3rem 0;
+}
+.friendsContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.friends {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.friendsPicture{
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px #878787;
+}
+.friendsInfo{
+
+  font-size: 0.5rem;
 }
 .map {
-  padding: 1.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 @media (min-width: 768px) {
   main{
@@ -137,7 +168,11 @@ h3{
     padding: 1rem 2rem;
     margin: 1rem;
   }
-  .map {
-    padding: 3rem 1rem;
+  .infoUser{
+    height: 50%;
+    padding: 1rem 0 0 0;
+  }
+  .infoFriends{
+    margin: 0;
   }
 }

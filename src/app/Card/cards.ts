@@ -22,7 +22,7 @@ export interface UserInfo {
   gender: string;
   name: { first: string; last: string };
   email: string;
-  picture: { large: string };
+  picture: { large: string, medium:string };
   location: { country: string };
   phone: string;
   dob: { age: number };

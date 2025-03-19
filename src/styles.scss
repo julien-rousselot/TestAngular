@@ -4,20 +4,20 @@ body {
   margin: 0;
 }
 
-body::before {
+body{
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/backgroundTravel.jpeg');
+  background-image: url('/worldmap.jpeg');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  opacity: 0.8; /* Ajuste ici pour réduire l'opacité */
   z-index: -1;
+
 }
 /* reset.css de Meyer */
 html, body, div, span, applet, object, iframe,
